@@ -1,5 +1,6 @@
-.home{
+@import url('../components/header.scss');
+.app{
     width: 100%;
     height: 100vh;
-    background-color: #ebebee;
+    background-color: var(--color-primary);
 }

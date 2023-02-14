@@ -1,7 +1,10 @@
 function App() {
     return ( 
         <section className="app">
-            <p>Hacker News</p>
+            <header className="app-header">
+                <h1>HACKER NEWS</h1>
+            </header>
+            
         </section>
      );
 }
