@@ -1,0 +1,17 @@
+.faves{
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+    overflow: auto;
+    background-color: var(--color-primary);
+    .faves-contBody{
+        width: 80%;
+        height: fit-content;
+        min-height: 600px;
+        margin: 40px auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+}

@@ -1,0 +1,33 @@
+.app-filter{
+    width: 75%;
+    margin: 10px auto;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    .filter-select{
+        width: 200px;
+        height: 30px;
+        border-radius: 0px;
+        background-color: transparent;
+        border: 1px solid var(--color-border);
+        option{
+            width: 100%;
+            height: calc(100% / 3);
+            border-radius: 0px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            p{
+                .filter-icon{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            
+        }
+    }
+
+}
