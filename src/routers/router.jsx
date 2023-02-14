@@ -2,8 +2,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import App from '../page/App';
 import Faves from '../page/Faves';
 import Login from '../page/Login';
-
+import React, { useEffect } from 'react';
 function Router() {
+   useEffect(() => {
+     
+   }, [])
    
     return ( 
         <>
