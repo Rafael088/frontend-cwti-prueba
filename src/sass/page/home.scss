@@ -1,5 +1,39 @@
-.home{
+@import url('../components/header.scss');
+@import url('../components/navBar.scss');
+@import url('../components/filter.scss');
+@import url('../components/content.scss');
+.app{
     width: 100%;
-    height: 100vh;
-    background-color: #ebebee;
+    min-height: 100vh;
+    height: fit-content;
+    overflow: auto;
+    background-color: var(--color-primary);
+    .app-buttons{
+        width: 400px;
+        height: 100px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        button{
+            width: 100px;
+            height: 30px;
+            margin: 0px 20px;
+            border: 1px solid transparent;
+            background-color: var(--color-secondary);
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.2s;
+            &:hover{
+                
+                border: 1px solid var(--color-secondary);
+                background-color: transparent;
+            }
+        }
+        #back{
+            color: white;
+            background-color: var(--color-back);
+        }
+    }
 }

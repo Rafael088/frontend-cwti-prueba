@@ -1,0 +1,17 @@
+@import url('./news.scss');
+.app-contBody{
+    width: 80%;
+    height: fit-content;
+    min-height: 600px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    
+}
+@media (min-width: 1500px) {
+    .app-contBody{
+        width: 60%;
+    }
+}

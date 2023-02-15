@@ -1,6 +1,18 @@
 @import url("./page/home.scss");
+@import url('./page/faves.scss');
+@import url('./page/login.scss');
+@import url('./page/loading.scss');
 *{
     font-family: 'Times New Roman', Times, serif;
     padding: 0px;
     margin: 0px;
+}
+:root{
+    --color-primary : #e0e0e0;
+    --color-secondary : #5EBAF2;
+    --color-text-title: #3b3b3b;
+    --color-box-shadown : #4d4d4d;
+    --color-border: #a3a3a3;
+    --color-back: rgb(100, 100, 100);
+    --color-text: #444444;
 }
