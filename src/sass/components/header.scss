@@ -6,6 +6,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    animation: animHeader 0.3s ease-in;
     h1{
         margin-left: 10%;
         font-size: 22px;
@@ -39,5 +40,13 @@
             
         }
         
+    }
+}
+@keyframes animHeader {
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0px);
     }
 }

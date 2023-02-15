@@ -1,14 +1,13 @@
 import News from "../news";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 import { useSelector } from "react-redux";
 function Content({count, page}) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
-    
     const {filter} = useSelector((state) => state.filter)
-    useEffect(() => {
+    useLayoutEffect(() => {
         getData(filter)
         async function getData(query) {
             setLoading(true)
@@ -18,8 +17,7 @@ function Content({count, page}) {
             .then(data => {
                 setData(data.hits)
                 setLoading(false)
-                console.log(data.hits)
-            })
+            })  
             .catch(err => console.log(err))
         }
     }, [filter, page])
@@ -33,7 +31,7 @@ function Content({count, page}) {
                 </>:
                 <>
                     {data.slice(0, count).map(data => (
-                        <News key={data.parent_id}  data={data}/>
+                        <News key={data.story_id}  data={data}/>
                     ))}
                 </>
             }
