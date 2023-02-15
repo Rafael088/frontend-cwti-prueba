@@ -21,6 +21,10 @@
             font-size: 25px;
             color: var(--color-text-title);
         }
+        p{
+            font-size: 16px;
+            text-align: center;
+        }
         .icon{
             width: 30px;
             height: 30px;
@@ -34,5 +38,14 @@
     }
     100%{
         transform: rotate(0deg);
+    }
+}
+@media screen and (max-width: 800px) {
+    .loading{
+        .loading-body{
+            
+            width: 90%;
+            height: 100%;
+        }
     }
 }
