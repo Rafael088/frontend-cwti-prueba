@@ -6,9 +6,10 @@ import React, { useEffect } from 'react';
 import { useDispatch } from "react-redux";
 import { addFavesAll } from "../services/factures/faves";
 function Faves() {
+    //declaration of variables
     const {faves} = useSelector(state => state.faves)
     const dispatch = useDispatch()
-
+    //effect to load data from memory
     useEffect(() => {
         if (localStorage.getItem('favesItems')) {
             dispatch(addFavesAll(JSON.parse(localStorage.getItem('favesItems'))))
@@ -16,6 +17,8 @@ function Faves() {
             localStorage.setItem('favesItems',  JSON.stringify([]))
           }
     }, [dispatch])
+
+    //funtion clear localstorage
     function changeClear() {
         
         dispatch(addFavesAll([]))

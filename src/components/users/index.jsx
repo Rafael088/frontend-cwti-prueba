@@ -6,12 +6,16 @@ import { useDispatch } from "react-redux";
 import React, { useEffect } from 'react';
 
 function User() {
+    //declaration of variables
+    //get params auth to redux
     const {auth} = useSelector(state => state.auth)
     const dispatch = useDispatch()
+    //funtion logout clear redux auth 
     function loget() {
         dispatch(deleteData())
         localStorage.removeItem('auth')
     }
+    //effect for get user data saved in localstorage
     useEffect(() => {
         if (localStorage.getItem('auth')) {
             dispatch(addData(JSON.parse(localStorage.getItem('auth'))))

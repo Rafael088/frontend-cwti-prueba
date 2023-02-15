@@ -5,8 +5,6 @@ function Loading() {
     const navigate = useNavigate()
     useEffect(() => {
         setTimeout(() => navigate('/home'), 3000)
-        
-    
     }, [navigate])
     
     return ( 

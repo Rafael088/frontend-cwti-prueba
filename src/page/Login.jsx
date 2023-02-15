@@ -4,10 +4,13 @@ import React, { useState } from 'react';
 import { addData } from "../services/factures/auth";
 import { useDispatch } from "react-redux";
 function Login() {
+    //declaration of variables
     const navigate = useNavigate()
     const {register, handleSubmit} = useForm();
     const [err, setErr] = useState('');
     const dispatch = useDispatch()
+
+    //funtion login is a test
     function login(db) {
         if (db.name === "Rafael") {
             if (db.password === "cwti2023") {
@@ -15,7 +18,6 @@ function Login() {
                 localStorage.setItem('auth', JSON.stringify(db))
                 navigate(`/login/${db.name}`)
             }else{
-                
                 setErr('Name user invalidate')
             }
         }else{

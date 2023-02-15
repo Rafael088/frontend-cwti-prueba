@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 function NavBar() {
-
+    //navigate in to routers
     let params = window.location.pathname
     
     return ( 

@@ -4,9 +4,12 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 function News({data}) {
+    
+    //declaration of variables
     const [is, setIs] = useState(false);
     const {auth} = useSelector(state => state.auth)
     const navigate = useNavigate()
+    //effect for get items in faves
     useEffect(() => {
         if (localStorage.getItem('favesItems')) {
             let list = JSON.parse(localStorage.getItem('favesItems'))
@@ -17,10 +20,12 @@ function News({data}) {
             });
         }
     }, [data])
-    
+    //funtion to add items on faves
     function getFav() {
+        //check if there is user
         if (auth) {
             setIs(true)
+            //check if there localstorage
             if (localStorage.getItem('favesItems')) {
                 
                 let list = JSON.parse(localStorage.getItem('favesItems'))
@@ -28,18 +33,16 @@ function News({data}) {
                     list.push(data) 
                     localStorage.setItem('favesItems', JSON.stringify(list))
                 }else{
+                    
+                    //check if items are already in the list
                     let temp = list.find(element => element.created_at_i === data.created_at_i)                    
                     if (temp) {
-                        console.log("Esta Historia ya esta")
+                        console.log("This story is already")
                     }else{
                         list.push(data)
                         localStorage.setItem('favesItems', JSON.stringify(list))
                     }
-
-                }
-                
-            
-                
+                }    
             }else{
                 localStorage.setItem('favesItems', JSON.stringify([data]))
             }

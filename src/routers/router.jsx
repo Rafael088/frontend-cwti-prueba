@@ -1,13 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Faves from '../page/Faves';
 import Login from '../page/Login';
-import React, { useEffect } from 'react';
 import App from '../page/App';
 import Loading from '../page/Loaidng';
 function Router() {
-   useEffect(() => {
-     
-   }, [])
+    //routes to the entire application
    
     return ( 
         <>

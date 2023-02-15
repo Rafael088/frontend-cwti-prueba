@@ -7,9 +7,11 @@ import React, { useState, useLayoutEffect } from 'react';
 import { addFilter } from '../services/factures/filter';
 import { useDispatch } from 'react-redux';
 function App() {
+    //declaration of variables
     const [count, setCount] = useState(8);
     const [page, setPage] = useState(0);
     const dispatch = useDispatch()
+    //function to change pages
     function changeCount() {
         if (count === 16) {
             setPage(page + 1)
@@ -18,10 +20,12 @@ function App() {
             setCount(count + 8)
         }
     }
+    //back to page function
     function changeCountBack() {
         setPage(page - 1)
         setCount(8)
     }
+    //effect to load data from memory
     useLayoutEffect(() => {
         if (localStorage.getItem('valueFilter')) {
             dispatch(addFilter(localStorage.getItem('valueFilter')))

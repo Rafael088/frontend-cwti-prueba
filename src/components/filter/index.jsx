@@ -5,8 +5,11 @@ import { useSelector } from "react-redux";
 import { addFilter } from '../../services/factures/filter';
 function Filter() {
     
+    //declaration of variables
+    //get params filter to redux
     const {filter} = useSelector((state) => state.filter)
     const dispatch = useDispatch()
+    //geting params onchange
     function handleChange(e) {
         localStorage.setItem('valueFilter', e.target.value)
         dispatch(addFilter(e.target.value))
